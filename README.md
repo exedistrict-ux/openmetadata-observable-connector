@@ -1,46 +1,23 @@
-# 🚀 OpenMetadata Observable Connector
+# 🔗 OpenMetadata Observable Connector
 
-## 📌 Overview
-This project is part of the Back to the Metadata Hackathon.
+A Streamlit-based connector that integrates Observable HQ notebooks with OpenMetadata.
 
-The goal is to build an Observable Connector / BI Dashboard integration with OpenMetadata, enabling users to visualize and monitor data insights effectively.
-
----
-
-## 💡 Idea
-This project aims to:
-- Connect OpenMetadata with BI / dashboard tools
-- Provide a simple way to visualize metadata
-- Enable better observability and insights
-
----
+## 🚀 Features
+- Fetch Observable HQ notebooks metadata
+- Display collections and dashboards
+- OpenMetadata integration ready
 
 ## 🛠️ Tech Stack
 - Python
+- Streamlit
+- Observable HQ API
 - OpenMetadata API
-- Streamlit (for dashboard UI)
-- REST APIs
 
----
+## ⚙️ Setup
+1. Clone the repo
+2. Install dependencies: `pip install -r requirements.txt`
+3. Create `.env` file: `OBSERVABLE_API_KEY=your_key`
+4. Run: `python -m streamlit run app.py`
 
-## ⚙️ Features (Planned)
-- Fetch metadata from OpenMetadata
-- Display datasets / tables
-- Simple dashboard UI
-- Basic analytics / insights
-
----
-
-## 🚧 Status
-🟡 In Progress (Hackathon Project)
-
----
-
-## 🧑‍💻 Author
-Gaurang Bhatt
-
----
-
-## 🔗 Hackathon Reference
-- Back to the Metadata Hackathon
-- OpenMetadata Project# openmetadata-observable-connector
+## 🎯 Hackathon
+Built for Back to the Metadata Hackathon 2025
