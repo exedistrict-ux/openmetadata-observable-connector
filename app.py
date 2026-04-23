@@ -1,8 +1,9 @@
 import streamlit as st
 import requests
 import pandas as pd
+import os
 
-OBSERVABLE_API_KEY = "a1994b1db9eee2478f9873da6c377420c728469d"
+OBSERVABLE_API_KEY = os.getenv("OBSERVABLE_API_KEY", "")
 WORKSPACE = "gaurang-bhatt"
 
 headers = {
@@ -47,12 +48,4 @@ with tab1:
 
 with tab2:
     st.subheader("Observable Collections")
-    if st.button("Fetch Collections"):
-        with st.spinner("Fetching..."):
-            data = get_collections()
-            df = pd.DataFrame(data)
-            st.dataframe(df)
-            st.success(f"✅ Found {len(data)} collections!")
-
-st.sidebar.markdown("### About")
-st.sidebar.info("This connector fetches metadata from Observable HQ and displays it for OpenMetadata integration.")
+    if st.button("Fetch Collections")
