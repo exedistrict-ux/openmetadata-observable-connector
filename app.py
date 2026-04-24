@@ -48,4 +48,12 @@ with tab1:
 
 with tab2:
     st.subheader("Observable Collections")
-    if st.button("Fetch Collections")
+    if st.button("Fetch Collections"):
+        with st.spinner("Fetching..."):
+            data = get_collections()
+            df = pd.DataFrame(data)
+            st.dataframe(df)
+            st.success(f"✅ Found {len(data)} collections!")
+
+st.sidebar.markdown("### About")
+st.sidebar.info("This connector fetches metadata from Observable HQ and displays it for OpenMetadata integration.")
